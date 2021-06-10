@@ -9,6 +9,7 @@ import useForm from "../../../Hooks/useForm";
 import Input from "../../Form/Input/Input";
 import Button from "../../Form/Button/Button";
 import Error from "../../Helper/Error";
+import Head from "../../Helper/Head";
 
 import styles from "./LoginForm.module.css";
 import stylesButton from "../../Form/Button/Button.module.css";
@@ -29,7 +30,10 @@ const LoginForm = () => {
 
   return (
     <section className="animeLeft">
+      <Head title="Login" />
+
       <h1 className="title">Login</h1>
+
       <form className={styles.form} onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" {...username} />
         <Input label="Senha" type="password" {...password} />
@@ -40,7 +44,7 @@ const LoginForm = () => {
           <Button>Entrar</Button>
         )}
 
-        <Error error={error} />
+        <Error error={error && "Dados incorretos."} />
       </form>
 
       <Link to="/login/perdeu" className={styles.perdeu}>

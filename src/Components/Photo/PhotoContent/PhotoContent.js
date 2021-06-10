@@ -10,11 +10,11 @@ import Image from "../../Helper/Image";
 
 import styles from "./PhotoContent.module.css";
 
-const PhotoContent = ({ data: { photo, comments } }) => {
+const PhotoContent = ({ data: { photo, comments }, single = false }) => {
   const user = React.useContext(UserContext);
 
   return (
-    <div className={styles.photo}>
+    <div className={`${styles.photo} ${single ? styles.single : ""}`}>
       <div className={styles.img}>
         <Image src={photo.src} alt={photo.title} />
       </div>
@@ -32,7 +32,7 @@ const PhotoContent = ({ data: { photo, comments } }) => {
           </p>
 
           <h1 className="title">
-            <Link to={`/photo/${photo.id}`}>{photo.title}</Link>
+            <Link to={`/foto/${photo.id}`}>{photo.title}</Link>
           </h1>
 
           <ul className={styles.attributes}>
@@ -42,7 +42,7 @@ const PhotoContent = ({ data: { photo, comments } }) => {
         </div>
       </div>
 
-      <PhotoComments id={photo.id} comments={comments} />
+      <PhotoComments id={photo.id} comments={comments} single={single} />
     </div>
   );
 };

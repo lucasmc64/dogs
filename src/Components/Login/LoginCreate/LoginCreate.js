@@ -10,6 +10,7 @@ import { USER_POST } from "../../../api";
 import Input from "../../Form/Input/Input";
 import Button from "../../Form/Button/Button";
 import Error from "../../Helper/Error";
+import Head from "../../Helper/Head";
 
 const LoginCreate = () => {
   const username = useForm();
@@ -36,6 +37,8 @@ const LoginCreate = () => {
 
   return (
     <section className="animeLeft">
+      <Head title="Criar conta" />
+
       <h1 className="title">Cadastre-se</h1>
 
       <form onSubmit={handleSubmit}>
