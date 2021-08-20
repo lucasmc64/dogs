@@ -14,7 +14,7 @@ Share your adventures and your little dog with people who have the same passion 
 
 ## :scroll: Some details 
 
-* The fontend is built with ReactJS.
+- The fontend is built with ReactJS.
 
 ## :thinking: How do I run the project on my machine? 
 
@@ -22,8 +22,8 @@ The first step is to clone the project, either via terminal or GitHub Desktop, o
 
 ### :hammer_and_wrench: Requirements 
 
-* [Node.JS](https://nodejs.org/).
-* (Optional) [Yarn](https://yarnpkg.com/).
+- [Node.JS](https://nodejs.org/).
+- (Optional) [Yarn](https://yarnpkg.com/).
 
 ### :mag: Installing dependencies 
 
